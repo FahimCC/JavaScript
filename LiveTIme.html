@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date & Time</title>
+  </head>
+  <body>
+    <p>Click the button to display a date after changing the hours</p>
+    <button onclick="myFunction()">Date & Time</button>
+    <p id="demo"></p>
+    <script>
+      //   function myFunction() {
+      //     var time = new Date();
+      //     time.setHours(5);
+      //     document.getElementById('demo').innerHTML = time;
+      //   }
+      (function () {
+        setInterval(() => {
+          var time = new Date().toLocaleTimeString();
+          document.getElementById('demo').innerHTML = time;
+        }, 1000);
+      })();
+    </script>
+  </body>
+</html>
